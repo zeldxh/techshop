@@ -1,30 +1,30 @@
 # techshop
 
-online store with product catalog, shopping cart, invoicing, and role-based access. built with spring boot and thymeleaf.
+Online store with product catalog, shopping cart, invoicing, and role-based access. Built with Spring Boot and Thymeleaf.
 
-## features
+## Features
 
-- product catalog with categories, browsing, and price-range queries
-- shopping cart and checkout flow, generating invoices (`factura`) and sale line items (`venta`)
-- role-based access control with dynamic, database-driven route permissions
-- user registration with email confirmation
-- product images stored in firebase cloud storage
-- multi-language ui (english, spanish, french, portuguese)
+- Product catalog with categories, browsing, and price-range queries
+- Shopping cart and checkout flow, generating invoices (`factura`) and sale line items (`venta`)
+- Role-based access control with dynamic, database-driven route permissions
+- User registration with email confirmation
+- Product images stored in Firebase Cloud Storage
+- Multi-language UI (English, Spanish, French, Portuguese)
 
-## stack
+## Stack
 
-| technology       | version | purpose                    |
-|-------------------|---------|----------------------------|
-| java              | 21      | runtime                    |
-| spring boot       | 4.x     | backend                    |
-| thymeleaf         | -       | server-side templates      |
-| bootstrap         | 5.3     | ui                         |
-| mysql             | 8.0+    | database                   |
-| spring security   | -       | auth and authorization     |
-| firebase storage  | -       | product image hosting      |
-| spring mail       | -       | registration emails        |
+| Technology       | Version | Purpose                |
+|------------------|---------|------------------------|
+| Java             | 21      | Runtime                |
+| Spring Boot      | 4.x     | Backend                |
+| Thymeleaf        | -       | Server-side templates  |
+| Bootstrap        | 5.3     | UI                     |
+| MySQL            | 8.0+    | Database               |
+| Spring Security  | -       | Auth and authorization |
+| Firebase Storage | -       | Product image hosting  |
+| Spring Mail      | -       | Registration emails    |
 
-## package layout
+## Package Layout
 
 ```
 src/main/java/com/tienda/
@@ -37,26 +37,26 @@ src/main/java/com/tienda/
   TiendaApplication.java
 ```
 
-## setup
+## Setup
 
-**prerequisites:** jdk 21+, mysql 8.0+, maven, a firebase project with a storage bucket and a service account key
+**Prerequisites:** JDK 21+, MySQL 8.0+, Maven, a Firebase project with a storage bucket and a service account key
 
-1. create the database using `src/main/resources/creaTablas.sql`.
+1. Create the database using `src/main/resources/creaTablas.sql`.
 
-2. copy the env file and fill in your credentials:
+2. Copy the env file and fill in your credentials:
 
    ```sh
    cp .env.example .env
    ```
 
-   you'll need a mysql user, a firebase service account json file (path set via `FIREBASE_CREDENTIALS_PATH`), and a gmail account with an app password for outgoing mail.
+   You'll need a MySQL user, a Firebase service account JSON file (path set via `FIREBASE_CREDENTIALS_PATH`), and a Gmail account with an app password for outgoing mail.
 
-3. start the app:
+3. Start the app:
 
    ```bash
    mvn spring-boot:run
    ```
 
-## license
+## License
 
 MIT License, see [LICENSE](LICENSE).
